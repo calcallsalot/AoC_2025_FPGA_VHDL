@@ -25,8 +25,8 @@ package body productID_pkg is
 	function ceil_div(a, b : unsigned) return unsigned is 
 		variable tmp : unsigned(a'length downto 0);
 	begin 
-	-- tmp = a + (b-1) (one extra bit for carry)
-    tmp := ('0' & a) + ('0' & (b - 1));
-    return resize(tmp / b, a'length);
-  end;
+		-- tmp = a + (b-1) (one extra bit for carry)
+		tmp := ('0' & a) + ('0' & (b - 1));
+		return resize(tmp / b, a'length);
+	end;
 end package body;
